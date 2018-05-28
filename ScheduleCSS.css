@@ -1,12 +1,15 @@
 .title	{
 	font-size: 29px;
 	padding-bottom: 20px;
+    text-transform: uppercase;  
 }
 
 body	{
 	text-align: center;
 		padding: 100px;
 		padding-top: 30px;
+        font-family: arial, sans-serif;
+        background-color: ghostwhite;
 }
 
 th	{
@@ -23,7 +26,8 @@ table{
 }
 
 td:hover {
-	background-color: lightblue;
+	background-color: lightblue; 
+    color: firebrick; 
 }
 
 .search	{
@@ -36,7 +40,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: ghostwhite; 
 }
 
 li {
@@ -53,4 +57,11 @@ li a {
 
 li a:hover {
     background-color: blue;
+    color: #fff;
+    border-radius: 10px; 
+}
+
+.no-action:hover{  
+    background-color: ghostwhite;
+    color: black;
 }
