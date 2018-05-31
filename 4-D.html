@@ -1,113 +1,296 @@
 <!DOCTYPE HTML> 
 
+
+
 <html>
+
+
 
 	<head>
 
+	
+
 		<link href="./ScheduleCSS.css" type="text/css" rel="stylesheet">
+
+   
 
     <script>
 
+
+
 			function Hi() {
 
+      
 
+                // This section has been added to reset the background color of cells ======
 
-				var Hi = document.getElementById("selectedClass").value;
+                
+
+                if(Hi != "")
+
+                    {
+
+                       var hiHi = document.getElementsByClassName(selectedClass);
+
+				 	   for (i=0 ; i<hiHi.length ; i++) 
+
+                       {                      
+
+				            hiHi[i].style.backgroundColor = "ghostwhite" ;
+
+                            hiHi[i].style.color = "black" ;
+
+					   }
+
+                    }
+
+                var hiHi = "";
+
+                // ============== 
+
+                
+
+                var Hi = document.getElementById("selectedClass").value;
 
 
 
                 switch (Hi) {
 
+
+
 						case 'Rel':
-						
+
+
+
 							selectedClass = "Rel";
 
+
+
 						break;
+
+
+
+			
+
+
 
 						case 'Gym':
 
+
+
 							selectedClass = "Gym";
 
+
+
 						break;
+
+
+
+			
+
 
 
 						case 'Eng':
 
+
+
 							selectedClass = "Eng";
 
+
+
 						break;
+
+			
+
+
 
 						case 'Sci':
 
+
+
 							selectedClass = "Sci";
 
+
+
 						break;
+
+
+
+			
+
+
 
 						case 'Mat':
 
+
+
 							selectedClass = "Mat";
+
+
 
 						break;
 
-						case 'Arc':
+                        
+
+                        case 'Arc':
+
+
 
 							selectedClass = "Arc";
 
+
+
 						break;
+
+                        
+
+                        case 'Frn':
+
+
+
+							selectedClass = "Frn";
+
+
+
+						break;
+
+
+
+			
+
+
+
+						case 'Eng':
+
+
+
+							selectedClass = "Arc";
+
+
+
+						break;
+
+
+
+			
+
+
 
 						case 'His':
 
+
+
 							selectedClass = "His";
 
+
+
 						break;
+
+
+
+			
+
+
 
 						case 'Com':
 
+
+
 							selectedClass = "Com";
 
+
+
 						break;
+
+
+
+			   
+
+
 
 						case 'Spc':
 
+
+
 							selectedClass = "Spc";
 
+
+
 						break;
+
+
+
+						
+
+
 
 						case 'Adv':
 
+
+
 		                    selectedClass = "Adv";
 
+
+
 						break;
+
+
+
+						
+
+
 
 						default:
 
+
+
 							console.log('Invalid term');
+
+
 
 						break;
 
+
+
 					}
+
+
 
                     var hiHi = document.getElementsByClassName(selectedClass);
 
+                
+
 					for (i=0 ; i<hiHi.length ; i++) {
+
+
 
 						hiHi[i].style.backgroundColor = "blue" ;
 
-                        hiHi[i].style.color = "white" ; 
+                        hiHi[i].style.color = "white" ; // I've added a white text color when activated to make it easier to read
+
+
 
 					}
 
+
+
 			}
 
-
-
     </script>
+
 
 
 	</head> 
 
 
+
+	
+
+
+
     <body>  
+
+
 
         <ul>
 
@@ -125,287 +308,609 @@
 
 		</ul>
 
+
+
 		<div class="title"> Schedule 2017/2018 </div>
+
+
 
 		<div class="search">
 
-        <select id="selectedClass"> 
+
+
+    
+
+        <select onChange="Hi()" id="selectedClass">   <!-- OnChange -> call to function when slection is made -->
+
+            <option value="">Make a selection</option>
+
+
 
             <option value="Rel">Religion</option> 
 
+
+
             <option value="Gym">Gym</option>
+
+
 
             <option value="Eng">English</option>
 
+
+
             <option value="Sci">Science</option>
+
+
 
             <option value="Mat">Math</option>
 
+            
+
+            <option value="Frn">French</option>
+
+
+
             <option value="Arc">Architecture</option>
+
+
 
             <option value="His">History</option>
 
+
+
             <option value="Com">Computer Programming</option>
+
+
 
             <option value="Spc">Speech</option>
 
+
+
             <option value="Adv">Advisor</option>
+
+
 
         </select>       
 
+    
 
-	<input type="text" placeholder="Search..">
+<!--  This is the search that I remove has it was conflicted with the droplist 
 
-	<input type="Submit" onclick="Hi()"> 
+	<form id="myForm" onsubmit="Hi()">
 
-	    </div>	
+        <input id="searchClass" type="text" placeholder="Search..">
+
+
+
+	   <input type="Submit" >   onclick="Hi()" 
+
+    </form>
+
+-->
+
+	</div>	
+
+
+
+								
+
 
 
         <table border="1">
 
+
+
             <thead>
+
+
 
                 <tr>
 
+
+
                     <th></th>
+
+
 
                     <th>Day 1</th>
 
+
+
                     <th>Day 2</th>
+
+
 
                     <th>Day 3</th>
 
+
+
                     <th>Day 4</th>
+
+
 
                     <th>Day 5</th>
 
+
+
                     <th>Day 6</th>
+
+
 
                     <th>Day 7</th>
 
+
+
                     <th>Day 8</th>
+
+
 
                     <th></th>
 
+
+
                     <th>Day A1</th>
+
+
 
                     <th>Day A3</th>
 
+
+
                     <th>Day A6</th>
+
+
 
                  </tr> 
 
+
+
             </thead>  
 
+
+
+            
+
+
+
             <tr>
+
 
 
                 <div class="period_1">
 
+
+
                 <td class="no-action">Period 1<br /><br /></td>  
 
-                <td class="Sci"><br /> Science<br /> Class: 334</td>
 
-                <td class="Mat"><br /> Math<br /> Class: 208</td>
 
-                <td class="Eng"><br /> English<br /> Class: 253</td>
+                <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
 
-                <td class="Mat"><br /> Math<br /> Class: 208</td>
 
-                <td class="Frn"><br /> French<br /> Class: 351</td>
 
-                <td class="Com"><br /> Computer<br /> Class: 320</td>
+                <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
 
-                <td class="Eng"><br /> English<br /> Class: 253</td>
 
-                <td class="Gym"><br /> Gym<br /> Class: 100</td>
+
+                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+
+
+
+                <td class="Mat"><br /> Mr. R<br /> Class: 208</td>
+
+
+
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+
+
+
+                <td class="Com all"><br /> Mr. C<br /> Class: 320</td>
+
+
+
+                <td class="Eng all"><br /> Mr. E<br /> Class: 253</td>
+
+
+
+                <td class="Gym all"><br /> Mr. G<br /> Class: 100</td>
+
+
 
                 <td class="no-action"><br /><br /></td>
 
+
+
                 <td class="no-action"><br /><br /></td>
 
-                <td class="Eng"><br /> English<br /> Class: 253</td>
 
-                <td class="His"><br /> History<br /> Class: 219</td>
+
+                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+
+
+
+                <td class="His"><br /> Mr. H<br /> Class: 219</td>
+
+
 
                 </div>
+
+
+
+
+
+
 
             </tr> 
 
+
+
             <tr>
+
+
 
                 <div class="period_2">
 
-                <td>Period 2<br /><br /></td>
 
-                <td class="Rel"><br /> Religion<br /> Class: 150</td>
 
-                <td class="Arc"><br /> Architecture<br /> Class: 236</td>
+                <td class="no-action">Period 2<br /><br /></td>
 
-                <td class="Sci"><br /> Science<br /> Class: 334</td>
 
-                <td class="Com"><br /> Computer<br /> Class: 320</td>
 
-                <td class="Arc"><br /> Architecture<br /> Class: 236</td>
+                <td class="Rel"><br /> Mr. R<br /> Class: 150</td>
 
-                <td class="Sci"><br /> Science<br /> Class: 334</td>
 
-                <td class="Sci"><br /> Science<br /> Class: 334</td>
 
-                <td class="Mat"><br /> Math<br /> Class: 208</td>
+                <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
 
-                <td><br /><br /></td>
 
-                <td class="Com"><br /> Computer<br /> Class: 320</td>
 
-                <td class="Com"><br /> Computer<br /> Class: 320</td>
+                <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
 
-                <td class="Com"><br /> Computer<br /> Class: 320</td>
+
+
+                <td class="Com"><br /> Mr. C<br /> Class: 320</td>
+
+
+
+                <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
+
+
+
+                <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
+
+
+
+                <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
+
+
+
+                <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
+
+
+
+                <td class="no-action"><br /><br /></td>
+
+
+
+                <td class="Com"><br /> Mr. C<br /> Class: 320</td>
+
+
+
+                <td class="Com"><br /> Mr. C<br /> Class: 320</td>
+
+
+
+                <td class="Com"><br /> Mr. C<br /> Class: 320</td>
+
+
 
                 </div>
 
+
+
+
+
+
+
             </tr>
 
+
+
             <tr>
+
+
 
                 <div class="period_3">
 
-                <td>Period 3<br /><br /></td>
 
-                <td class="Mat"><br /> Math<br /> Class: 208</td>
 
-                <td class="Frn"><br /> French<br /> Class: 351</td>
+                <td class="no-action">Period 3<br /><br /></td>
 
-                <td class="His"><br /> History<br /> Class: 219</td>
 
-                <td class="Gym"><br /> Gym<br /> Class: 100</td>
 
-                <td class="Rel"><br /> Religion<br /> Class: 150</td>
-				
-                <td class="His"><br /> History<br /> Class: 219</td>
+                <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
 
-                <td class="Mat"><br /> Math<br /> Class: 208</td>
 
-                <td class="Eng"><br /> English<br /> Class: 253</td>
 
-                <td><br /><br /></td>
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
 
-                <td class="Eng"><br /> English<br /> Class: 253</td>
 
-                <td><br /><br /></td>
 
-                <td class="Eng"><br /> English<br /> Class: 253</td>
+                <td class="His"><br /> Mr. H<br /> Class: 219</td>
+
+
+
+                <td class="Gym"><br /> Mr. G<br /> Class: 100</td>
+
+
+
+                <td class="Rel"><br /> Mr. R<br /> Class: 150</td>
+
+
+
+                <td class="His"><br /> Mr. H<br /> Class: 219</td>
+
+
+
+                <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
+
+
+
+                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+
+
+
+                <td class="no-action"><br /><br /></td>
+
+
+
+                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+
+
+
+                <td class="no-action"><br /><br /></td>
+
+
+
+                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+
+
 
                 </div>
 
 
+
+
+
+
+
             </tr>
 
+
+
             <tr>
+
+
 
                 <div class="period_4">
 
-                <td>Period 4<br /><br /></td>
 
-                <td class="Com"><br /> Computer<br /> Class: 320</td>
 
-                <td class="His"><br /> History<br /> Class: 219</td>
+                <td class="no-action">Period 4<br /><br /></td>
 
-                <td class="Hrm"><br /> Homeroom<br /> Class: 334</td>
 
-                <td class="Spc"><br /> Speech<br /> Class: 151</td>
 
-                <td class="His"><br /> History<br /> Class: 219</td>
+                <td class="Com"><br /> Mr. C<br /> Class: 320</td>
 
-                <td class="Arc"><br /> Architecture<br /> Class: 236</td>
 
-                <td class="LA4"><br /> LA4<br /> Class: 123</td>
 
-                <td class="Spc"><br /> Speech<br /> Class: 151</td>
+                <td class="His"><br /> Mr. H<br /> Class: 219</td>
 
-                <td><br /><br /></td>
 
-                <td class="Adv"><br /> Advisor<br /> Class: 250</td>
 
-                <td class="Adv"><br /> Advisor<br /> Class: 250</td>
+                <td class="Hrm"><br /> Mr. H<br /> Class: 334</td>
 
-                <td class="Adv"><br /> Advisor<br /> Class: 250</td>
+
+
+                <td class="Spc"><br /> Mr. S<br /> Class: 151</td>
+
+
+
+                <td class="His"><br /> Mr. H<br /> Class: 219</td>
+
+
+
+                <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
+
+
+
+                <td class="LA4"><br /> Mr. L<br /> Class: 123</td>
+
+
+
+                <td class="Spc"><br /> Mr. S<br /> Class: 151</td>
+
+
+
+                <td class="no-action"><br /><br /></td>
+
+
+
+                <td class="Adv"><br /> Mr. A<br /> Class: 250</td>
+
+
+
+                <td class="Adv"><br /> Mr. A<br /> Class: 250</td>
+
+
+
+                <td class="Adv"><br /> Mr. A<br /> Class: 250</td>
+
+
 
                 </div>
 
+
+
+
+
+
+
             </tr>
 
+
+
             <tr>
+
+
 
                 <div class="period_5">
 
-                <td>Period 5<br /><br /></td>
 
-                <td class="Com"><br /> Computer<br /> Class: 320</td>
 
-                <td class="Sci"><br /> Science<br /> Class: 334</td>
+                <td class="no-action">Period 5<br /><br /></td>
 
-                <td class="Mat"><br /> Math<br /> Class: 208</td>
 
-                <td class="Sci"><br /> Science<br /> Class: 334</td>
 
-                <td class="Sci"><br /> Science<br /> Class: 334</td>
+                <td class="Com"><br /> Mr. C<br /> Class: 320</td>
 
-                <td class="Arc"><br /> Architecture<br /> Class: 236</td>
 
-                <td class="Rel"><br /> Religion<br /> Class: 150</td>
 
-                <td class="Frn"><br /> French<br /> Class: 351</td>
+                <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
 
-                <td><br /><br /></td>
 
-                <td class="Frn"><br /> French<br /> Class: 351</td>
 
-                <td class="Frn"><br /> French<br /> Class: 351</td>
+                <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
 
-                <td class="Frn"><br /> French<br /> Class: 351</td>
+
+
+                <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
+
+
+
+                <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
+
+
+
+                <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
+
+
+
+                <td class="Rel"><br /> Mr. R<br /> Class: 150</td>
+
+
+
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+
+
+
+                <td class="no-action"><br /><br /></td>
+
+
+
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+
+
+
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+
+
+
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+
+
 
                 </div>
 
 
+
+
+
+
+
             </tr>
+
+
 
             <tr>
 
+
+
                 <div class="period_6">
 
-                <td>Period 6<br /><br /></td>
-				
-                <td class="His"><br /> History<br /> Class: 219</td>
 
-                <td class="Eng"><br /> English<br /> Class: 253</td>
 
-                <td class="Frn"><br /> French<br /> Class: 351</td>
+                <td class="no-action">Period 6<br /><br /></td>
 
-                <td class="Rel"><br /> Religion<br /> Class: 150</td>
 
-                <td class="Eng"><br /> English<br /> Class: 253</td>
 
-                <td class="Mat"><br /> Math<br /> Class: 208</td>
+                <td class="His"><br /> Mr. H<br /> Class: 219</td>
 
-                <td class="Frn"><br /> French<br /> Class: 351</td>
 
-                <td class="Arc"><br /> Architecture<br /> Class: 236</td>
 
-                <td><br /><br /></td>
+                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
 
-                <td class="His"><br /> History<br /> Class: 219</td>
 
-                <td class="His"><br /> History<br /> Class: 219</td>
 
-                <td><br /><br /></td>
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+
+
+
+                <td class="Rel"><br /> Mr. R<br /> Class: 150</td>
+
+
+
+                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+
+
+
+                <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
+
+
+
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+
+
+
+                <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
+
+
+
+                <td class="no-action"><br /><br /></td>
+
+
+
+                <td class="His"><br /> Mr. H<br /> Class: 219</td>
+
+
+
+                <td class="His"><br /> Mr. H<br /> Class: 219</td>
+
+
+
+                <td class="no-action"><br /><br /></td>
+
+
 
                 </div>
 
+
+
+
+
+
+
             </tr>
+
+
 
         </table>
 
+
+
     </body> 
 
+
+
 </html>
+
