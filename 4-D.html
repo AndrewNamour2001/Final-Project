@@ -14,20 +14,21 @@
                 // This section has been added to reset the background color of cells ======
                 document.getElementById("myTable").style.backgroundColor = "ghostwhite";
                 if(Hi != "")
-                    {
+                   
+		       {
                        var hiHi = document.getElementsByClassName(selectedClass);
 				 	   for (i=0 ; i<hiHi.length ; i++) 
                        {                      
 				            hiHi[i].style.backgroundColor = "ghostwhite" ;   
                             hiHi[i].style.color = "black" ;
 					   }
-                    }
+                   			   }
                     else 
-                    {
+                       {
                         location.reload();
-                    }
+                   			   }
 
-                switch (Hi) {
+                		switch (Hi) {
 
 						case 'Rel':
 
@@ -38,8 +39,6 @@
 
 						break;
 
-			
-
 						case 'Gym':
 
 							selectedClass = "Gym";
@@ -48,8 +47,6 @@
                             document.getElementById("myMsg").innerHTML = "The Gym Class makes me dizzy...";
 
 						break;
-
-			
 
 						case 'Eng':
 
@@ -60,7 +57,6 @@
 
 						break;
 			
-
 						case 'Sci':
 
 							selectedClass = "Sci";
@@ -69,8 +65,6 @@
                             document.getElementById("myMsg").innerHTML = "Hum...Need help here!";
 
 						break;
-
-			
 
 						case 'Mat':
 
@@ -81,7 +75,7 @@
 
 						break;
                         
-                        case 'Arc':
+                          			case 'Arc':
 
 							selectedClass = "Arc";
                             document.body.style.backgroundColor = "#D8F781";
@@ -90,7 +84,7 @@
 
 						break;
                         
-                        case 'Frn':
+                        			case 'Frn':
 
 							selectedClass = "Frn";
                             document.body.style.backgroundColor = "#BEF781";
@@ -98,7 +92,6 @@
                             document.getElementById("myMsg").innerHTML = "French Class with mister Raymond...";
 
 						break;
-
 
 						case 'His':
 
@@ -109,8 +102,6 @@
 
 						break;
 
-			
-
 						case 'Com':
 
 							selectedClass = "Com";
@@ -120,8 +111,6 @@
 
 						break;
 
-			   
-
 						case 'Spc':
 
 							selectedClass = "Spc";
@@ -130,8 +119,6 @@
                             document.getElementById("myMsg").innerHTML = "I'm Speechless!...";
 
 						break;
-
-						
 
 						case 'Adv':
 
@@ -147,9 +134,9 @@
                             selectedClass = "LA4";
                             document.body.style.backgroundColor = "#81DAF5";
                             document.getElementById("myUL").style.backgroundColor = "#81DAF5";
-                            document.getElementById("myMsg").innerHTML = "I Guess this one is for Lab...";
+                            document.getElementById("myMsg").innerHTML = "I Guess this one is for Idk...";
 
-                        break;
+                        			break;
 
 						default:
 
@@ -171,7 +158,7 @@
 
 					}
 
-			}
+					}
     </script>
 
 	</head> 
@@ -180,29 +167,30 @@
 
     <body>  
 
-        <ul id="myUL">
+       <ul id="myUL">
 			
-			<li><a href= "./4-A.html">4-A </a></li>
+	<li><a href= "./4-A.html">4-A </a></li>
 			
-			<li><a href= "./4-B.html">4-B </a></li>
+	<li><a href= "./4-B.html">4-B </a></li>
 			
-			<li><a href= "./4-C.html">4-C </a></li>
+	<li><a href= "./4-C.html">4-C </a></li>
 		
-			<li><a href= "./4-D.html">4-D </a></li>
+	<li><a href= "./4-D.html">4-D </a></li>
 			
-			<li><a href= "./4-E.html">4-E </a></li>
+	<li><a href= "./4-E.html">4-E </a></li>
 			
-			<li><a href= "./4-F.html">4-F </a></li>
-		</ul>
+	<li><a href= "./4-F.html">4-F </a></li>
+		
+       </ul>
 
-		<div class="title"> Schedule 2017/2018 </div>
+	
+	<div class="title"> Schedule 2017/2018 </div>
 
-		<div class="search">
+	<div class="search">
 
-    
         <select onChange="Hi()" id="selectedClass">   <!-- OnChange -> call to function when slection is made -->
             
-			<option value="">Make a selection</option>
+	    <option value="">Make a selection</option>
 
             <option value="Rel">Religion</option> 
 
@@ -280,33 +268,33 @@
             <tr>
                 <div class="period_1">
                     
-				<td class="no-action">Period 1<br /><br /></td>
+		<td class="no-action">Period 1<br /><br /></td>
                   
-				<td class="Sci"><br /> Mr. S<br /> Class: 334</td>
+		<td class="Sci"><br /> Mr. S<br /> Class: 334</td>
                   
-				<td class="Mat"><br /> Mr. M<br /> Class: 208</td>
+		<td class="Mat"><br /> Mr. M<br /> Class: 208</td>
                    
-				<td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+		<td class="Eng"><br /> Mr. E<br /> Class: 253</td>
                 
-				<td class="Mat"><br /> Mr. R<br /> Class: 208</td>
+		<td class="Mat"><br /> Mr. R<br /> Class: 208</td>
                 
-				<td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+		<td class="Frn"><br /> Mr. F<br /> Class: 351</td>
                   
-				<td class="Com"><br /> Mr. C<br /> Class: 320</td>
+		<td class="Com"><br /> Mr. C<br /> Class: 320</td>
                   
-				<td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+		<td class="Eng"><br /> Mr. E<br /> Class: 253</td>
                  
-				<td class="Gym"><br /> Mr. G<br /> Class: 100</td>
+		<td class="Gym"><br /> Mr. G<br /> Class: 100</td>
                   
-			    <td class="no-action"><br /><br /></td>
+	        <td class="no-action"><br /><br /></td>
                    
-				<td class="no-action"><br /><br /></td>
+		<td class="no-action"><br /><br /></td>
                   
-			    <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+		<td class="Eng"><br /> Mr. E<br /> Class: 253</td>
                    
-				<td class="His"><br /> Mr. H<br /> Class: 219</td>
+		<td class="His"><br /> Mr. H<br /> Class: 219</td>
               
-			  </div>
+		</div>
           
 		  </tr> 
                   
