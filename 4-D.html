@@ -1,916 +1,496 @@
 <!DOCTYPE HTML> 
 
-
-
 <html>
 
-
-
 	<head>
-
 	
-
 		<link href="./ScheduleCSS.css" type="text/css" rel="stylesheet">
-
    
-
     <script>
 
-
-
 			function Hi() {
-
-      
-
+                var Hi = document.getElementById("selectedClass").value;   
+                
                 // This section has been added to reset the background color of cells ======
-
-                
-
+                document.getElementById("myTable").style.backgroundColor = "ghostwhite";
                 if(Hi != "")
-
                     {
-
                        var hiHi = document.getElementsByClassName(selectedClass);
-
 				 	   for (i=0 ; i<hiHi.length ; i++) 
-
                        {                      
-
-				            hiHi[i].style.backgroundColor = "ghostwhite" ;
-
+				            hiHi[i].style.backgroundColor = "ghostwhite" ;   
                             hiHi[i].style.color = "black" ;
-
 					   }
-
                     }
-
-                var hiHi = "";
-
-                // ============== 
-
-                
-
-                var Hi = document.getElementById("selectedClass").value;
-
-
+                    else 
+                    {
+                        location.reload();
+                    }
 
                 switch (Hi) {
 
-
-
 						case 'Rel':
 
-
-
 							selectedClass = "Rel";
-
-
+                            document.body.style.backgroundColor = "#F78181";
+                            document.getElementById("myUL").style.backgroundColor = "#F78181";
+                            document.getElementById("myMsg").innerHTML = "I Love Religion...";
 
 						break;
 
-
-
 			
-
-
 
 						case 'Gym':
 
-
-
 							selectedClass = "Gym";
-
-
+                            document.body.style.backgroundColor = "#F79F81";
+                            document.getElementById("myUL").style.backgroundColor = "#F79F81";
+                            document.getElementById("myMsg").innerHTML = "The Gym Class makes me dizzy...";
 
 						break;
 
-
-
 			
-
-
 
 						case 'Eng':
 
-
-
 							selectedClass = "Eng";
-
-
+                            document.body.style.backgroundColor = "#F7BE81";
+                            document.getElementById("myUL").style.backgroundColor = "#F7BE81";
+                            document.getElementById("myMsg").innerHTML = "This class is easy peasy...";
 
 						break;
-
 			
-
-
 
 						case 'Sci':
 
-
-
 							selectedClass = "Sci";
-
-
+                            document.body.style.backgroundColor = "#F5DA81";
+                            document.getElementById("myUL").style.backgroundColor = "#F5DA81";
+                            document.getElementById("myMsg").innerHTML = "Hum...Need help here!";
 
 						break;
 
-
-
 			
-
-
 
 						case 'Mat':
 
-
-
 							selectedClass = "Mat";
-
-
+                            document.body.style.backgroundColor = "#F3F781";
+                            document.getElementById("myUL").style.backgroundColor = "#F3F781";
+                            document.getElementById("myMsg").innerHTML = "One day I'll be a mad scientist...";
 
 						break;
-
                         
-
                         case 'Arc':
 
-
-
 							selectedClass = "Arc";
-
-
+                            document.body.style.backgroundColor = "#D8F781";
+                            document.getElementById("myUL").style.backgroundColor = "#D8F781";
+                            document.getElementById("myMsg").innerHTML = "Architecture defines our nation...";
 
 						break;
-
                         
-
                         case 'Frn':
 
-
-
 							selectedClass = "Frn";
-
-
-
-						break;
-
-
-
-			
-
-
-
-						case 'Eng':
-
-
-
-							selectedClass = "Arc";
-
-
+                            document.body.style.backgroundColor = "#BEF781";
+                            document.getElementById("myUL").style.backgroundColor = "#BEF781";
+                            document.getElementById("myMsg").innerHTML = "French Class with mister Raymond...";
 
 						break;
-
-
-
-			
-
 
 
 						case 'His':
 
-
-
 							selectedClass = "His";
-
-
+                            document.body.style.backgroundColor = "#81F781";
+                            document.getElementById("myUL").style.backgroundColor = "#81F781";
+                            document.getElementById("myMsg").innerHTML = "History defines our civilization...";
 
 						break;
-
-
 
 			
 
-
-
 						case 'Com':
 
-
-
 							selectedClass = "Com";
-
-
+                            document.body.style.backgroundColor = "#81F79F";
+                            document.getElementById("myUL").style.backgroundColor = "#81F79F";
+                            document.getElementById("myMsg").innerHTML = "I Love Programming...";
 
 						break;
-
-
 
 			   
 
-
-
 						case 'Spc':
 
-
-
 							selectedClass = "Spc";
-
-
+                            document.body.style.backgroundColor = "#81F7BE";
+                            document.getElementById("myUL").style.backgroundColor = "#81F7BE";
+                            document.getElementById("myMsg").innerHTML = "I'm Speechless!...";
 
 						break;
 
-
-
 						
-
-
 
 						case 'Adv':
 
-
-
 		                    selectedClass = "Adv";
-
-
+                            document.body.style.backgroundColor = "#81F7D8";
+                            document.getElementById("myUL").style.backgroundColor = "#81F7D8";
+                            document.getElementById("myMsg").innerHTML = "Need some advise?...";
 
 						break;
 
+						case 'LA4':
 
+                            selectedClass = "LA4";
+                            document.body.style.backgroundColor = "#81DAF5";
+                            document.getElementById("myUL").style.backgroundColor = "#81DAF5";
+                            document.getElementById("myMsg").innerHTML = "I Guess this one is for Lab...";
 
-						
-
-
+                        break;
 
 						default:
 
-
-
 							console.log('Invalid term');
-
-
+                            document.body.style.backgroundColor = "#f8f8ff";
+                            document.getElementById("myUL").style.backgroundColor = "#f8f8ff";
+                            document.getElementById("myMsg").innerHTML = "...";
 
 						break;
 
-
-
 					}
-
-
 
                     var hiHi = document.getElementsByClassName(selectedClass);
-
                 
-
 					for (i=0 ; i<hiHi.length ; i++) {
 
-
-
 						hiHi[i].style.backgroundColor = "blue" ;
-
                         hiHi[i].style.color = "white" ; // I've added a white text color when activated to make it easier to read
-
-
 
 					}
 
-
-
 			}
-
     </script>
-
-
 
 	</head> 
 
-
-
 	
-
-
 
     <body>  
 
-
-
-        <ul>
-
+        <ul id="myUL">
+			
 			<li><a href= "./4-A.html">4-A </a></li>
-
+			
 			<li><a href= "./4-B.html">4-B </a></li>
-
+			
 			<li><a href= "./4-C.html">4-C </a></li>
-
+		
 			<li><a href= "./4-D.html">4-D </a></li>
-
+			
 			<li><a href= "./4-E.html">4-E </a></li>
-
+			
 			<li><a href= "./4-F.html">4-F </a></li>
-
 		</ul>
-
-
 
 		<div class="title"> Schedule 2017/2018 </div>
 
-
-
 		<div class="search">
 
-
-
     
-
         <select onChange="Hi()" id="selectedClass">   <!-- OnChange -> call to function when slection is made -->
-
-            <option value="">Make a selection</option>
-
-
+            
+			<option value="">Make a selection</option>
 
             <option value="Rel">Religion</option> 
 
-
-
             <option value="Gym">Gym</option>
-
-
 
             <option value="Eng">English</option>
 
-
-
             <option value="Sci">Science</option>
 
-
-
             <option value="Mat">Math</option>
-
             
-
             <option value="Frn">French</option>
-
-
 
             <option value="Arc">Architecture</option>
 
-
-
             <option value="His">History</option>
-
-
+            
+            <option value="LA4">Level Assemblies</option>   
 
             <option value="Com">Computer Programming</option>
 
-
-
             <option value="Spc">Speech</option>
-
-
 
             <option value="Adv">Advisor</option>
 
-
-
         </select>       
-
     
-
 <!--  This is the search that I remove has it was conflicted with the droplist 
-
 	<form id="myForm" onsubmit="Hi()">
-
         <input id="searchClass" type="text" placeholder="Search..">
 
-
-
 	   <input type="Submit" >   onclick="Hi()" 
-
     </form>
-
 -->
-
 	</div>	
-
-
 
 								
 
-
-
-        <table border="1">
-
-
+        <table border="1" id="myTable">
 
             <thead>
 
-
-
                 <tr>
 
-
-
                     <th></th>
-
-
 
                     <th>Day 1</th>
 
-
-
                     <th>Day 2</th>
-
-
 
                     <th>Day 3</th>
 
-
-
                     <th>Day 4</th>
-
-
 
                     <th>Day 5</th>
 
-
-
                     <th>Day 6</th>
-
-
 
                     <th>Day 7</th>
 
-
-
                     <th>Day 8</th>
-
-
 
                     <th></th>
 
-
-
                     <th>Day A1</th>
-
-
 
                     <th>Day A3</th>
 
-
-
                     <th>Day A6</th>
-
-
 
                  </tr> 
 
-
-
             </thead>  
 
-
-
-            
-
-
-
             <tr>
-
-
-
                 <div class="period_1">
-
-
-
-                <td class="no-action">Period 1<br /><br /></td>  
-
-
-
-                <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
-
-
-
-                <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
-
-
-
-                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
-
-
-
-                <td class="Mat"><br /> Mr. R<br /> Class: 208</td>
-
-
-
-                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
-
-
-
-                <td class="Com all"><br /> Mr. C<br /> Class: 320</td>
-
-
-
-                <td class="Eng all"><br /> Mr. E<br /> Class: 253</td>
-
-
-
-                <td class="Gym all"><br /> Mr. G<br /> Class: 100</td>
-
-
-
-                <td class="no-action"><br /><br /></td>
-
-
-
-                <td class="no-action"><br /><br /></td>
-
-
-
-                <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
-
-
-
-                <td class="His"><br /> Mr. H<br /> Class: 219</td>
-
-
-
-                </div>
-
-
-
-
-
-
-
-            </tr> 
-
-
-
+                    
+				<td class="no-action">Period 1<br /><br /></td>
+                  
+				<td class="Sci"><br /> Mr. S<br /> Class: 334</td>
+                  
+				<td class="Mat"><br /> Mr. M<br /> Class: 208</td>
+                   
+				<td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+                
+				<td class="Mat"><br /> Mr. R<br /> Class: 208</td>
+                
+				<td class="Frn"><br /> Mr. F<br /> Class: 351</td>
+                  
+				<td class="Com"><br /> Mr. C<br /> Class: 320</td>
+                  
+				<td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+                 
+				<td class="Gym"><br /> Mr. G<br /> Class: 100</td>
+                  
+			    <td class="no-action"><br /><br /></td>
+                   
+				<td class="no-action"><br /><br /></td>
+                  
+			    <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
+                   
+				<td class="His"><br /> Mr. H<br /> Class: 219</td>
+              
+			  </div>
+          
+		  </tr> 
+                  
             <tr>
-
-
 
                 <div class="period_2">
 
-
-
                 <td class="no-action">Period 2<br /><br /></td>
-
-
 
                 <td class="Rel"><br /> Mr. R<br /> Class: 150</td>
 
-
-
                 <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
 
-
-
                 <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
-
-
 
                 <td class="Com"><br /> Mr. C<br /> Class: 320</td>
 
-
-
                 <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
 
-
-
                 <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
 
-
-
                 <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
-
-
 
                 <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
 
-
-
                 <td class="no-action"><br /><br /></td>
 
-
+                <td class="Com"><br /> Mr. C<br /> Class: 320</td>
 
                 <td class="Com"><br /> Mr. C<br /> Class: 320</td>
 
-
-
                 <td class="Com"><br /> Mr. C<br /> Class: 320</td>
-
-
-
-                <td class="Com"><br /> Mr. C<br /> Class: 320</td>
-
-
 
                 </div>
 
 
 
-
-
-
-
             </tr>
 
-
-
             <tr>
-
-
 
                 <div class="period_3">
 
-
-
                 <td class="no-action">Period 3<br /><br /></td>
-
-
 
                 <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
 
-
-
                 <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
 
-
-
                 <td class="His"><br /> Mr. H<br /> Class: 219</td>
-
-
 
                 <td class="Gym"><br /> Mr. G<br /> Class: 100</td>
 
-
-
                 <td class="Rel"><br /> Mr. R<br /> Class: 150</td>
-
-
 
                 <td class="His"><br /> Mr. H<br /> Class: 219</td>
 
-
-
                 <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
 
-
-
                 <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
-
-
 
                 <td class="no-action"><br /><br /></td>
 
-
-
                 <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
-
-
 
                 <td class="no-action"><br /><br /></td>
 
-
-
                 <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
-
-
 
                 </div>
 
-
-
-
-
-
-
             </tr>
 
-
-
             <tr>
-
-
 
                 <div class="period_4">
 
-
-
                 <td class="no-action">Period 4<br /><br /></td>
-
-
 
                 <td class="Com"><br /> Mr. C<br /> Class: 320</td>
 
-
-
                 <td class="His"><br /> Mr. H<br /> Class: 219</td>
 
-
-
-                <td class="Hrm"><br /> Mr. H<br /> Class: 334</td>
-
-
+                <td class="His"><br /> Mr. H<br /> Class: 334</td>
 
                 <td class="Spc"><br /> Mr. S<br /> Class: 151</td>
 
-
-
                 <td class="His"><br /> Mr. H<br /> Class: 219</td>
 
-
-
                 <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
-
-
 
                 <td class="LA4"><br /> Mr. L<br /> Class: 123</td>
 
-
-
                 <td class="Spc"><br /> Mr. S<br /> Class: 151</td>
-
-
 
                 <td class="no-action"><br /><br /></td>
 
-
+                <td class="Adv"><br /> Mr. A<br /> Class: 250</td>
 
                 <td class="Adv"><br /> Mr. A<br /> Class: 250</td>
 
-
-
                 <td class="Adv"><br /> Mr. A<br /> Class: 250</td>
-
-
-
-                <td class="Adv"><br /> Mr. A<br /> Class: 250</td>
-
-
 
                 </div>
 
-
-
-
-
-
-
             </tr>
 
-
-
             <tr>
-
-
 
                 <div class="period_5">
 
-
-
                 <td class="no-action">Period 5<br /><br /></td>
-
-
 
                 <td class="Com"><br /> Mr. C<br /> Class: 320</td>
 
-
-
                 <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
-
-
 
                 <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
 
-
-
                 <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
 
-
-
                 <td class="Sci"><br /> Mr. S<br /> Class: 334</td>
-
-
 
                 <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
 
-
-
                 <td class="Rel"><br /> Mr. R<br /> Class: 150</td>
 
-
-
                 <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
-
-
 
                 <td class="no-action"><br /><br /></td>
 
-
+                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
 
                 <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
 
-
-
                 <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
-
-
-
-                <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
-
-
 
                 </div>
 
 
 
-
-
-
-
             </tr>
-
-
 
             <tr>
 
-
-
                 <div class="period_6">
-
-
 
                 <td class="no-action">Period 6<br /><br /></td>
 
-
-
                 <td class="His"><br /> Mr. H<br /> Class: 219</td>
-
-
 
                 <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
 
-
-
                 <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
-
-
 
                 <td class="Rel"><br /> Mr. R<br /> Class: 150</td>
 
-
-
                 <td class="Eng"><br /> Mr. E<br /> Class: 253</td>
-
-
 
                 <td class="Mat"><br /> Mr. M<br /> Class: 208</td>
 
-
-
                 <td class="Frn"><br /> Mr. F<br /> Class: 351</td>
-
-
 
                 <td class="Arc"><br /> Mr. A<br /> Class: 236</td>
 
-
-
                 <td class="no-action"><br /><br /></td>
-
-
 
                 <td class="His"><br /> Mr. H<br /> Class: 219</td>
 
-
-
                 <td class="His"><br /> Mr. H<br /> Class: 219</td>
 
-
-
                 <td class="no-action"><br /><br /></td>
-
-
 
                 </div>
 
-
-
-
-
-
-
             </tr>
 
-
-
-        </table>
-
-
-
-    </body> 
-
-
+       
+	   </table>
+        
+		<br />
+        
+		<span id="myMsg">...</span>
+   
+   </body> 
 
 </html>
-
